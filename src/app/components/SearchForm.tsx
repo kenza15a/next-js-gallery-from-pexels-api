@@ -21,7 +21,7 @@ function SearchForm() {
         value={search}
         placeholder="search"
         onChange={(e) => setSearch(e.target.value)}
-        className="bg-white p-2 w-[250px] sm:w-80 text-xl rounded-xl text-[#000000]"
+        className="bg-white p-2 w-[250px] sm:w-80 text-xl rounded-xl text-[#000000] outline-none	"
       />
     </form>
   );
