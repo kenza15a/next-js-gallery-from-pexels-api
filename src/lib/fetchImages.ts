@@ -14,10 +14,10 @@ const res=await fetch(url,{
 })
 if(!res.ok)throw new Error("fetch not working")
 const ImagesResults:ImagesResults=await res.json()
-console.log(ImagesResults)
+// console.log(ImagesResults)
 const parsedData=ImagesSchemaWithPhotos.parse(ImagesResults);
 if(parsedData.total_results===0) return undefined
-console.log(parsedData);
+// console.log(parsedData);
 return parsedData;
   }catch(e){
     //according to the error w will console in the terminal 
