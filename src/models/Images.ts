@@ -15,12 +15,12 @@ const PhotoSchema = z.object({
   src: z.object({ large: z.string() }),
   alt: z.string(),
   photographer: z.string().optional(),
-  blurredDataUrl:z.string().optional(),
+  photographer_url: z.string(), //to display one photographers url
+  blurredDataUrl: z.string().optional(),
 });
-export const ImagesSchemaWithPhotos= BasicImageSchema.extend({
-    photos:z.array(PhotoSchema)
-})
+export const ImagesSchemaWithPhotos = BasicImageSchema.extend({
+  photos: z.array(PhotoSchema),
+});
 
-export type photo=z.infer<typeof PhotoSchema>
-export type ImagesResults=z.infer<typeof ImagesSchemaWithPhotos>
-
+export type photo = z.infer<typeof PhotoSchema>;
+export type ImagesResults = z.infer<typeof ImagesSchemaWithPhotos>;

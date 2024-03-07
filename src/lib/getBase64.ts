@@ -16,7 +16,7 @@ async function getBase64(imageUrl: string) {
   }
 }
 
-export default async function addBlurredDaraUrls(
+export default async function addBlurredDataUrls(
   images: ImagesResults
 ): Promise<photo[]> {
   //fetching in parallel
