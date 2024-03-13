@@ -13,9 +13,25 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-      gridTemplateColumns:{
-        'gallery':'repeat(auto-fit,minmax(250px,1fr))'
-      }
+      gridTemplateColumns: {
+        gallery: "repeat(auto-fit,minmax(250px,1fr))",
+      },
+      screens: {
+        mobile: { max: "400px" },
+        // => @media (max-width: 1535px) { ... }
+
+        xl: { max: "1279px" },
+        // => @media (max-width: 1279px) { ... }
+
+        lg: { max: "1023px" },
+        // => @media (max-width: 1023px) { ... }
+
+        md: { max: "767px" },
+        // => @media (max-width: 767px) { ... }
+
+        sm: { max: "639px" },
+        // => @media (max-width: 639px) { ... }
+      },
     },
   },
   plugins: [],
